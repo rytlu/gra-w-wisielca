@@ -128,7 +128,7 @@ public class HangmanGame extends JFrame {
         newGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent event) {
-                selectDifficultyAndStartNewGame(); 
+                selectDifficulty(); 
             }
         });
 
@@ -140,10 +140,10 @@ public class HangmanGame extends JFrame {
         });
     }
 
-    private void selectDifficultyAndStartNewGame() {
+    private void selectDifficulty() {
         String[] options = {"Łatwy", "Średni", "Trudny"}; 
         int choice = JOptionPane.showOptionDialog(this, "Wybierz poziom trudności", "Nowa Gra",
-                JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[1]); 
+                JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]); 
 
         switch (choice) {
             case 0: maxAttempts = 10; break; 
